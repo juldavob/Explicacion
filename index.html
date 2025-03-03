@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Para ti</title>
+  <style>
+    /* Estilos generales */
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #FFE6E6; /* Rosa pastel */
+      color: #5E2B2B; /* Rojo oscuro */
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+    }
+
+    .container {
+      background-color: #FFFFFF; /* Blanco */
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+      width: 90%;
+      text-align: center;
+    }
+
+    h1 {
+      color: #D9534F; /* Rojo pastel */
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .menu {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    .menu button {
+      background-color: #D9534F; /* Rojo pastel */
+      color: #FFFFFF;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .menu button:hover {
+      background-color: #C9302C; /* Rojo más oscuro al pasar el mouse */
+    }
+
+    .texto {
+      display: none;
+      text-align: left;
+      padding: 20px;
+      background-color: #FFF0F0; /* Rosa más claro */
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+
+    .texto h2 {
+      color: #D9534F; /* Rojo pastel */
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+
+    .texto p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .mostrar {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Para ti</h1>
+    <p>
+      Hola wapetona, esta página es para ti. Sé que me pediste un documento, pero, también dijiste que tal vez no me gustaría la idea por ser ingeniero, así que, decidí hacerlo al modo ingeniero. Quiero que sepas que te adoro con todo mi ser. No fue mi intención hacerte daño, y espero que estas palabras te ayuden a sentirte mejor respecto a todo lo que pasó. Eres muy importante para mí, y no quiero que lo dudes nunca.
+    </p>
+    <div class="menu">
+      <button onclick="mostrarTexto('dulces')">Los dulces infernales</button>
+      <button onclick="mostrarTexto('pizza')">La infame pizza</button>
+    </div>
+    <div id="dulces" class="texto">
+      <h2>Los dulces</h2>
+      <p>
+        Hablemos de lo que pasó el día de los dulces. Sé que te lastimé, y, aunque no es justificado, quiero explicarte por qué actué como lo hice. En ese momento, lo único que quería era estar contigo. Tenía en mi mente un escenario distinto: entregar los dulces, salir de una vez de ese problema y luego irnos juntos, felices. Pero las cosas no salieron como pensé.
+        <br><br>
+        Mientras caminaba hacia la universidad, no podía dejar de pensar en ti. Decidí intentar alcanzarte en la parada del otro lado, pero mientras iba por el callejón antes del paradero, vi tu bus pasar. Fue un momento que me dolió bastante, como si hubiera perdido la única oportunidad de mejorar el asunto. Me sentí bloqueado, repitiéndome que tal vez si no lo hubiera pensado tanto, habría llegado a tiempo.
+        <br><br>
+        También me dolía pensar en que te había lastimado. Me arrepentí mucho de todo lo que pasó, pero no te escribí porque pensé que estarías molesta y no querrías hablar conmigo. Al irme a mi casa, estaba frustrado y molesto conmigo mismo. Solo podría repetirme que debí haberme quedado contigo desde el principio. Además, sabía que si te perdía, habría sido por mi culpa, y eso me aterraba.
+        <br><br>
+        A día de hoy, sigo arrepentido. Nunca quise hacerte daño, y lamento mucho no haber actuado de otra forma. Eres lo más importante para mí, y quiero que sepas que estoy dispuesto a hacer lo necesario para no volver a lastimarte.
+      </p>
+    </div>
+    <div id="pizza" class="texto">
+      <h2>La pizza</h2>
+      <p>
+        Ese día de la pizza, sé que las cosas no salieron como esperabas, como esperábamos, y lamento mucho haberte hecho sentir mal. Quiero que sepas que tampoco fue algo planeado. Ir por pizza no estaba dentro de los planes, fue algo que surgió en el momento, y el acuerdo era simplemente ir, comprarla, y volver, pero, al llegar, ella la empezó a comer en el lugar.
+        <br><br>
+        Yo le dije que se la comiera rápido, y mientras estábamos ahí, estaba más pendiente del celular. Cada vez que intentaba hablar conmigo, le respondía de forma cortante, intentando dar a entender que lo único importante era apurarnos. Al salir, me fui caminando rápido, ella quedaba atrás. No me importaba, yo estaba molesto por el tiempo que se fue en eso y que pude haber pasado contigo.
+        <br><br>
+        No fue justo para ti haberte dejado esperando, y lamento mucho haberte hecho sentir así. Te valoro muchísimo, y, aunque tal vez no lo haya demostrado mucho, desde el primer momento estoy trabajando en ser más consciente de tus sentimientos, en todo sentido. No quiero volver a lastimarte de esa manera, ni de ninguna otra.
+      </p>
+    </div>
+  </div>
+
+  <script>
+    function mostrarTexto(id) {
+      // Ocultar todos los textos
+      document.querySelectorAll('.texto').forEach(function(texto) {
+        texto.classList.remove('mostrar');
+      });
+
+      // Mostrar el texto seleccionado
+      document.getElementById(id).classList.add('mostrar');
+    }
+  </script>
+</body>
+</html>
